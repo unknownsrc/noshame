@@ -1,0 +1,7 @@
+services:
+  noshame:
+    container_name: noshame
+    image: ghcr.io/unknownsrc/noshame
+    volumes:
+      - ./config.yaml:/usr/src/noshame/config.yaml
+    restart: on-failure
