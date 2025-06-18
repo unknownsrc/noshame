@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>noshame</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .submissions {
+      width: 65%;
+      margin-top: 100px;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      box-sizing: border-box;
+      display: block;
+      font-size: 14px;
+    }
+    .action-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .left-actions,
+    .right-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    input[type="file"] {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <form class="submissions" method="post" enctype="multipart/form-data">
+    <textarea name="text" autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required></textarea>
+    <div class="action-row">
+      <div class="left-actions">
+        <input type="file" name="files" multiple>
+      </div>
+      <div class="right-actions">
+        <% if (it.showPassword) { %>
+          <input type="password" name="password" required placeholder="pgp key password"/>
+        <% } %>
+        <button type="submit">submit</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

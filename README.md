@@ -1,15 +1,10 @@
-# Elysia with Bun runtime
+# no shame
+a heavily WIP, privacy-focused, minimal journal.
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
+### features
+- pgp encrypt everything - supports public key only, but also allows providing a private key
+- supports attatchments
+- super minimal interface to avoid distractions
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
-
-Open http://localhost:3000/ with your browser to see the result.
+### wanted features
+- automatic backups via sftp or ftp
