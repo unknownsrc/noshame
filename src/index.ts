@@ -30,7 +30,7 @@ app.post('/', async ({ body: { text, files, password } }) => {
     signingKeys: privateKey
   });
 
-  const datePathPrefix = `${creationDate.getFullYear()}${padTheNumber(creationDate.getMonth().toString(), 2)}${padTheNumber(creationDate.getDate().toString(), 2)}`
+  const datePathPrefix = `${creationDate.getFullYear()}${padTheNumber((creationDate.getMonth() + 1).toString(), 2)}${padTheNumber(creationDate.getDate().toString(), 2)}`
   const notesToday = fs.readdirSync('./output').filter(f => f.startsWith(datePathPrefix) && f.endsWith('.txt'))
   const latestNumber = notesToday.length == 0 ? 0 : Math.max(...notesToday.map(n => parseInt(n.split('-')[1])).filter(n => !isNaN(n)))
   const entryPath = padTheNumber((latestNumber + 1).toString(), 4)
